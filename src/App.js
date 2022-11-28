@@ -10,6 +10,7 @@ import { useState } from "react"
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetContexts";
 import { useBills } from "./contexts/BillsContexts";
 import TotalBudgetCard from "./components/TotalBudgetCard";
+import HelloCard from "./components/HelloCard";
 import BillsCard from "./components/BillsCard";
 import AddBillsModal from "./components/AddBillsModal";
 import ViewBillsModal from "./components/ViewBillsModal";
@@ -24,6 +25,7 @@ function App() {
     const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState()
     const { budgets, getBudgetExpenses } = useBudgets()
     const { bills } = useBills()
+
 
     function openAddExpenseModal(budgetId) {
         setShowAddExpenseModal(true)
@@ -40,6 +42,11 @@ function App() {
         // setAddBillsModalBillId(billId)
     }
 
+    function isBudget() {
+        if (budgets.length === 0) return false
+        if (budgets.length != 0) return true
+    }
+
 
   return (
       <>
@@ -52,7 +59,7 @@ function App() {
           </Stack>
             <Container>
                 <Row className="mb-4 justify-content-md-center">
-                    <Col lg={5} md={12} className="mb-3" variant="danger"><TotalBudgetCard/></Col>
+                    <Col lg={5} md={12} className="mb-3" >{isBudget() ? <TotalBudgetCard/> : <HelloCard/>}</Col>
                     <Col lg={5} md={12} className="mb-3"><BillsCard
                                     onAddBillsClick={() => openAddBillsModal(bills.id)}
                                     onViewBillsClick={() => openBillsModal(bills.id)}
