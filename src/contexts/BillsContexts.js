@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { v4 as uuidV4 } from 'uuid'
 import useLocalStorage from "../hooks/useLocalStorage"
 
@@ -21,16 +21,6 @@ export const BillsProvider = ({ children }) => {
             return [...prevBills, { id: uuidV4(), description, billAmount, dateToPay, billId }]
         })
     }
-
-    // function addBudget({ name, max }) {
-    //     setBudgets(prevBudgets => {
-    //         if (prevBudgets.find(budget => budget.name === name)) {
-    //             return prevBudgets
-    //         }
-    //         return [...prevBudgets, { id: uuidV4(), name, max }]
-    //     })
-    // }
-
 
     function deleteBill({ id }) {
         setBills(prevBills => {

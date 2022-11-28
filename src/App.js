@@ -2,7 +2,6 @@ import { Stack, Button, Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import BudgetCard from "./components/BudgetCard";
 import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
-import './App.css';
 import AddBudgetModal from "./components/AddBudgetModal";
 import AddExpenseModal from "./components/AddExpenseModal";
 import ViewExpensesModal from "./components/ViewExpensesModal";
@@ -32,14 +31,12 @@ function App() {
         setAddExpenseModalBudgetId(budgetId)
     }
 
-    function openAddBillsModal(billId) {
+    function openAddBillsModal() {
         setShowAddBillsModal(true)
-        // setAddBillsModalBillId(billId)
     }
 
-    function openBillsModal(billId) {
+    function openBillsModal() {
         setShowBillsModal(true)
-        // setAddBillsModalBillId(billId)
     }
 
     function isBudget() {
