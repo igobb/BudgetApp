@@ -28,7 +28,6 @@ export const BillsProvider = ({ children }) => {
         })
     }
 
-
     return (
         <BillsContexts.Provider value={{
             bills,

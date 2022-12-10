@@ -51,7 +51,6 @@ export const BudgetsProvider = ({ children }) => {
         })
     }
 
-
     return (
        <BudgetsContext.Provider value={{
            budgets,

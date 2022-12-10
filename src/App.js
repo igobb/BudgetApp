@@ -14,7 +14,6 @@ import BillsCard from "./components/BillsCard";
 import AddBillsModal from "./components/AddBillsModal";
 import ViewBillsModal from "./components/ViewBillsModal";
 
-
 function App() {
     const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
     const [showAddExpenseModal, setShowAddExpenseModal] = useState(false)
@@ -24,7 +23,6 @@ function App() {
     const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState()
     const { budgets, getBudgetExpenses } = useBudgets()
     const { bills } = useBills()
-
 
     function openAddExpenseModal(budgetId) {
         setShowAddExpenseModal(true)
@@ -41,18 +39,17 @@ function App() {
 
     function isBudget() {
         if (budgets.length === 0) return false
-        if (budgets.length != 0) return true
+        if (budgets.length !== 0) return true
     }
-
 
   return (
       <>
         <Container>
           <Stack direction="horizontal" gap="2" className="mb-4">
             <h1 className="me-auto">PortfelIO</h1>
-            <Button variant="outline-primary" onClick={() => setShowAddBudgetModal(true)}>Dodaj środki</Button>
+            <Button variant="outline-primary" onClick={() => setShowAddBudgetModal(true)}>Dodaj budżet</Button>
               <Button variant="outline-primary" onClick={() => setShowAddBillsModal(true)}>Dodaj swoje rachunki</Button>
-            <Button variant="outline-secondary" onClick={openAddExpenseModal}>Dodaj wydatki</Button>
+            <Button variant="outline-secondary" onClick={openAddExpenseModal}>Dodaj osobne wydatki</Button>
           </Stack>
             <Container>
                 <Row className="mb-4 justify-content-md-center">
@@ -113,8 +110,6 @@ function App() {
              show={showBillsModal}
               handleClose={() => setShowBillsModal()}
           />
-
-
       </>
   )
 }

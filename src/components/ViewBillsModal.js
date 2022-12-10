@@ -4,6 +4,16 @@ import { currencyFormatter } from "../utils"
 
 export default function ViewBillsModal({ show, handleClose}) {
     const { bills, deleteBill } = useBills()
+    const billsLength = bills.length
+
+    function isAnyBill() {
+        console.log(bills.length)
+        if (billsLength === 0) {
+            return "Brak rachunków"
+        } else {
+            return "Nazwa rachunku / Kwota należna do zapłaty / Data spłaty"
+        }
+    }
 
     return (
         <Modal show={show} onHide={handleClose}>
@@ -11,7 +21,7 @@ export default function ViewBillsModal({ show, handleClose}) {
                 <Modal.Title>
                     <Stack gap="2">
                         <div>Twoje rachunki:</div>
-                        <div className="fs-6">Nazwa rachunku / Kwota należna do zapłaty / Data spłaty</div>
+                        <div className="fs-6">{isAnyBill()}</div>
                     </Stack>
                 </Modal.Title>
             </Modal.Header>
