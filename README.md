@@ -1,36 +1,43 @@
-<div align="center">
-<h1>Budget App</h1>
+# Budget App
+> Budget app for your finances.
 
-<h2>Live 💻</h2>
 
-⭐ <a href="https://igobb.github.io/BudgetApp/">Budget App site</a> ⭐
+## About
+* [Introduction](#introduction)
+* [Technologies](#technologies-used)
+* [Setup](#setup)
+* [Project Status](#project-status)
+* [Contact](#contact)
 
-<h2>About 🔍</h2>
 
+## Introduction
 Budget management app.
-
 Due to the progress bars filling up as the budget limit increases, it allows you to save money and better manage your expenses.
 
 Functionalities:
+* Adding and deleting a budget specified by the user
+* Adding and removing expenses to a user-specified budget
+* Preview of expenses with the name of the expense and the amount
+* View the status of all user wallets
+* Add and remove bills
+* Preview of all bills with account name, amount and repayment date
 
-Adding and deleting a budget specified by the user
 
-Adding and removing expenses to a user-specified budget
+## Technologies Used
+* React
+* LocalStorage
+* Own hook
+* React Bootstrap
 
-Preview of expenses with the name of the expense and the amount
+## Setup
+To run this project, open this link:
 
-View the status of all user wallets
+⭐ <a href="https://igobb.github.io/BudgetApp/">Budget App site</a> ⭐
 
-Add and remove bills
 
-Preview of all bills with account name, amount and repayment date
+## Project Status
+Project is: _complete_
 
-<h2>To create this site I use: 💎</h2>
 
-React
-
-LocalStorage
-
-Own hook
-
-</div>
+## Contact
+Created by [@IGoB](https://igobb-portfolio.netlify.app/) - feel free to contact me!
